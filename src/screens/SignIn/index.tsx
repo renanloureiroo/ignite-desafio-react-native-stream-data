@@ -34,6 +34,7 @@ export function SignIn() {
       await signIn()
     } catch (err) {
       Alert.alert("Erro SignIn", "Ocorreu um erro ao tentar logar no app.")
+      console.log(err)
     }
   }
 

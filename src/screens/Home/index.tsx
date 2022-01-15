@@ -157,8 +157,6 @@ export function Home() {
         </UserInfo>
 
         <SignOutButton onPress={handleSignOut}>
-          Verify if isLoggingOut is true If it is, show an ActivityIndicator
-          Otherwise, show Feather's power icon
           {isLoggingOut ? (
             <ActivityIndicator size={25} color={theme.colors.white} />
           ) : (

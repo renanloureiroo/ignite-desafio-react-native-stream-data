@@ -73,6 +73,7 @@ function AuthProvider({ children }: AuthProviderData) {
       // call startAsync with authUrl
       const response = await startAsync({ authUrl })
       // verify if startAsync response.type equals "success" and response.params.error differs from "access_denied"
+      console.log(response)
       if (
         response.type === "success" &&
         response.params.error !== "access_denied"
@@ -140,7 +141,7 @@ function AuthProvider({ children }: AuthProviderData) {
   useEffect(() => {
     // add client_id to request's "Client-Id" header
 
-    api.defaults.headers["Cliente-Id"] = CLIENT_ID
+    api.defaults.headers["Client-Id"] = CLIENT_ID
   }, [])
 
   return (
